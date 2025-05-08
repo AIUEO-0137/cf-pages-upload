@@ -25,13 +25,13 @@ async function encryptData(data) {
 }
 
 export async function onRequestPost(context) {
-  const formData = await context.request.formData();
+  const formData = await context.request.json();  // ←ここだけ修正！
 
-  const nickname = formData.get('nickname');
-  const mobile = formData.get('mobile');
-  const mail = formData.get('mail');
-  const amount = formData.get('amount');
-  const details = formData.get('details');
+  const nickname = formData.nickname;
+  const mobile = formData.mobile;
+  const mail = formData.mail;
+  const amount = formData.amount;
+  const details = formData.details;
 
   if (!nickname || !mobile || !mail || !amount || !details) {
     return new Response('Missing fields', { status: 400 });
