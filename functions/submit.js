@@ -25,25 +25,25 @@ async function encryptData(data) {
 }
 
 export async function onRequestPost(context) {
-  const formData = await context.request.json();  // ←ここだけ修正！
+  try {
+    const formData = await context.request.json();  // ←ここ修正！
 
-  const nickname = formData.nickname;
-  const mobile = formData.mobile;
-  const mail = formData.mail;
-  const amount = formData.amount;
-  const details = formData.details;
+    const { nickname, mobile, mail, amount, details } = formData;
 
-  if (!nickname || !mobile || !mail || !amount || !details) {
-    return new Response('Missing fields', { status: 400 });
+    if (!nickname || !mobile || !mail || !amount || !details) {
+      return new Response('Missing fields', { status: 400 });
+    }
+
+    const payload = { nickname, mobile, mail, amount, details };
+    const encrypted = await encryptData(payload);
+
+    const KV = context.env.MY_KV;
+    const id = crypto.randomUUID();
+    await KV.put(id, JSON.stringify(encrypted));
+
+    return new Response('保存成功！');
+  } catch (error) {
+    console.error(error);
+    return new Response('サーバーエラー: ' + error.message, { status: 500 });
   }
-
-  const payload = { nickname, mobile, mail, amount, details };
-
-  const encrypted = await encryptData(payload);
-
-  const KV = context.env.MY_KV;
-  const id = crypto.randomUUID();
-  await KV.put(id, JSON.stringify(encrypted));
-
-  return new Response('保存成功！');
 }
