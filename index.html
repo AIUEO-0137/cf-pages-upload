@@ -2,121 +2,239 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-<meta name="google-site-verification" content="sjvQu-R6AbCZ3eJYgUFzKDa4b8hOQZ0cuhj5C7LKHCI" />
-  <title>悪徳サイト被害の無料相談フォーム｜GOEMON</title>
-    <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-QV7W1C6SJF"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-QV7W1C6SJF');
-</script>
-
-  <meta name="description" content="悪徳サイトの詐欺被害で困っている方へ。弁護士と連携し返金支援を完全無料で行う匿名相談フォーム。安心してご利用ください。">
-  <meta name="keywords" content="詐欺,返金,悪徳サイト,情報商材,被害相談,無料相談,マッチング詐欺">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- SNSシェア対策（OGP） -->
-  <meta property="og:title" content="悪徳サイト被害の無料相談フォーム｜GOEMON">
-  <meta property="og:description" content="詐欺被害でお悩みの方へ。匿名OK・完全無料でご相談可能です。">
-  <meta property="og:image" content="https://i.imgur.com/SMS84eB.jpeg">
-  <meta property="og:url" content="https://cf-pages-upload-2.pages.dev">
-  <meta property="og:type" content="website">
-
-  <!-- canonical（正規URL） -->
-  <link rel="canonical" href="https://cf-pages-upload-2.pages.dev">
-
+  <title>悪徳サイト被害者 無料相談フォーム</title>
   <style>
     body {
-      font-family: sans-serif;
-      background-color: #f7f7f7;
+      font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+    }
+    header img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .intro-section {
       padding: 20px;
-      color: #333;
+      margin: 20px auto;
+      border-radius: 10px;
+      max-width: 900px;
+    }
+    .notice-section {
+      background: #ffffff;
+    }
+    .white-section {
+      background: #ffffff;
+    }
+    .intro-section h2 {
+      font-size: 28px;
+      font-weight: bold;
+      font-family: "KaiTi", "楷書体", serif;
+      border-bottom: 2px solid #e57373;
+      margin-bottom: 15px;
+    }
+    .notice-section h2 {
+      border-bottom: 2px solid #4CAF50;
+    }
+    .intro-section p {
+      font-size: 18px;
+      margin-bottom: 10px;
+      line-height: 1.8;
+    }
+    .flow-section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+    .flow-section h2 {
+      font-size: 26px;
+      color: #1976d2;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .flow-step {
+      background: #ffffff;
+      border-left: 6px solid #64b5f6;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 6px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+    .flow-step h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #1976d2;
+    }
+    .flow-step p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .form-container {
+      max-width: 600px;
+      background: white;
+      padding: 20px;
+      margin: 40px auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
     h1 {
-      color: #c00;
+      text-align: center;
+      margin-bottom: 20px;
     }
-    label {
-      display: block;
-      margin: 10px 0 5px;
+    form {
+      display: flex;
+      flex-direction: column;
     }
-    input, textarea {
-      width: 100%;
-      padding: 8px;
+    input, textarea, button {
       margin-bottom: 15px;
-      border-radius: 5px;
+      padding: 10px;
+      font-size: 16px;
       border: 1px solid #ccc;
+      border-radius: 5px;
     }
     button {
-      background-color: #c00;
-      color: #fff;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
+      background-color: #4CAF50;
+      color: white;
+      font-size: 18px;
       cursor: pointer;
+      transition: background-color 0.3s;
     }
     button:hover {
-      background-color: #900;
+      background-color: #45a049;
     }
-    .policy {
-      font-size: 0.9em;
-      color: #666;
+    #success-message {
+      display: none;
+      text-align: center;
+      font-size: 20px;
+      color: green;
       margin-top: 20px;
+    }
+    footer {
+      background-color: #f0f0f5;
+      color: #333;
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 14px;
+      margin-top: 60px;
+    }
+    footer a {
+      color: #00796b;
+      margin: 0 10px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+    #privacy-policy {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease;
+    }
+    #privacy-policy.open {
+      max-height: 800px;
     }
   </style>
 </head>
 <body>
-  <h1>詐欺被害・返金無料相談フォーム</h1>
-  <form id="form">
-    <label>ニックネーム</label>
-    <input type="text" name="nickname" required>
 
-    <label>電話番号</label>
-    <input type="tel" name="mobile" required>
+<header>
+  <img src="https://i.imgur.com/SMS84eB.jpeg" alt="ヘッダー画像">
+</header>
 
-    <label>メールアドレス</label>
-    <input type="email" name="mail" required>
+<section class="intro-section notice-section">
+  <h2>ゴエモンのご利用にあたって</h2>
+  <p>当サイトはあくまで「悪徳サイトの被害者さんの返金を無償で手伝うサイト」です。</p>
+  <p>余計な情報を載せず、かえって混乱を招かないように極力シンプルな構成にしている意図があります。</p>
+  <p>予めご了承くださいませ。</p>
+</section>
 
-    <label>被害金額</label>
-    <input type="text" name="amount" required>
+<section class="intro-section white-section">
+  <h2>自己紹介</h2>
+  <p>私は、かつて悪徳サイトの運営管理に関わっていた過去を持つ者です。</p>
+  <p>しかし、家族が被害に遭い…悲惨な末路を辿ったことで初めて自らの過ちに気付きました。</p>
+  <p>同じように苦しむ方々を一人でも多く救いたい──</p>
+  <p>その思いから、弁護士と協力し「返金まで0円」で完全サポートする相談窓口を立ち上げました。</p>
+  <p>悪徳サイトの裏側・手法・どうやったら返金に繋がるかを完全網羅している私だからこそ出来ることがあります。</p>
+  <p>あなたが安心して、未来へ進むお手伝いをさせてください。</p>
+</section>
 
-    <label>被害内容</label>
-    <textarea name="details" rows="4" required></textarea>
+<section class="flow-section">
+  <h2>無料相談の流れ４ステップ</h2>
 
+  <div class="flow-step">
+    <h3>① 応答に時間がかかることもあります</h3>
+    <p>１人で日に何十人もの方の対応をしている事もあり、返信が遅れてしまう事がございますが必ずお返事致します。</p>
+  </div>
+
+  <div class="flow-step">
+    <h3>② 対象は「悪徳サイト被害者」のみ</h3>
+    <p>当サイトは悪徳サイト被害者専門のサイトであり、ご相談内容は「返金相談」のみに限らせて頂きます。</p>
+  </div>
+
+  <div class="flow-step">
+    <h3>③ 相談フォームを送信してください</h3>
+    <p>下記の相談フォームにご記入後送信ください。以降、被害金額に応じた返金完了までを無償でサポート致します。</p>
+  </div>
+
+  <div class="flow-step">
+    <h3>④ 携帯番号での相談を推奨</h3>
+    <p>確実な返金、確実なご相談対応を行うため、必ず携帯番号をご記載ください。ショートメッセージにてご連絡差し上げます。</p>
+  </div>
+</section>
+
+<div class="form-container">
+  <h1>無料相談フォーム</h1>
+
+  <form id="contact-form">
+    <input type="text" name="nickname" placeholder="お名前（ニックネーム可）" required>
+    <input type="text" name="mobile" placeholder="携帯番号" required>
+    <input type="email" name="mail" placeholder="メールアドレス" required>
+    <input type="number" name="amount" placeholder="被害金額（円）" required>
+    <textarea name="details" rows="5" placeholder="被害内容の詳細" required></textarea>
     <button type="submit">送信</button>
   </form>
 
-  <p id="result"></p>
+  <div id="success-message">送信が完了しました！</div>
+</div>
 
-  <div class="policy">
-    ※ご相談内容は暗号化され、安全に保管されます。<br>
-    匿名でのご相談も歓迎いたします。<br>
-    プライバシーポリシーに基づき、第三者に情報を提供することは一切ありません。
-  </div>
+<footer>
+  <p>© 2025 GOEMON All Rights Reserved.</p>
+  <p><a onclick="togglePrivacy()">プライバシーポリシー</a></p>
+</footer>
 
-  <script>
-    document.getElementById("form").addEventListener("submit", async function (e) {
-      e.preventDefault();
-      const formData = new FormData(this);
-      const data = Object.fromEntries(formData.entries());
+<section id="privacy-policy" class="intro-section white-section">
+  <h2>プライバシーポリシー</h2>
+  <p>当サイトでは、相談者様からご提供いただく個人情報（お名前、携帯番号、メールアドレス、相談内容など）を、返金支援およびご連絡の目的のみに使用し、適切に管理いたします。</p>
+  <p>取得した情報は第三者に提供・共有することは一切ありません。ただし、返金対応において必要な場合、連携する弁護士と情報を共有する場合がございます。</p>
+  <p>なお、ご本人からの削除依頼があった場合には、速やかに対応いたします。</p>
+  <p>安心してご相談いただけるよう、情報の取り扱いには細心の注意を払っております。</p>
+</section>
 
-      try {
-        const res = await fetch("/submit", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify(data)
-        });
-
-        const text = await res.text();
-        document.getElementById("result").textContent = text;
-      } catch (err) {
-        document.getElementById("result").textContent = "送信エラーが発生しました。";
-      }
+<script>
+  document.getElementById('contact-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const formData = new FormData(this);
+    const data = Object.fromEntries(formData.entries());
+    const response = await fetch('/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
     });
-  </script>
+    if (response.ok) {
+      this.style.display = 'none';
+      document.getElementById('success-message').style.display = 'block';
+    } else {
+      alert('送信に失敗しました。再度お試しください。');
+    }
+  });
+
+  function togglePrivacy() {
+    const section = document.getElementById("privacy-policy");
+    section.classList.toggle("open");
+  }
+</script>
+
 </body>
 </html>
